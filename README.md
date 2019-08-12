@@ -12,7 +12,7 @@ Framework란?
 * Django 수행 방식
 
   * M(Model) : 데이터를 관리
-* T(Template) : 사용자가 보는 화면
+  * T(Template) : 사용자가 보는 화면
   * V(View) : 중간 관리자
 
 
