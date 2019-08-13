@@ -9,6 +9,8 @@ Framework란?
 
 **Django**
 
+![django01](C:\Users\student\Desktop\수업\django\first-django-project\django01.JPG)
+
 * Django 수행 방식
 
   * M(Model) : 데이터를 관리
@@ -100,7 +102,7 @@ $ cd __프로젝트 이름/폴더 이름__
 ```
 
 ```bash
-$ django-admin startproject __프로젝트 이름__.
+$ django-admin startproject __프로젝트 이름__ .
 ```
 
 * 프로젝트이름으로 구성된 폴더와, `manage.py`가 생성된다.
@@ -170,7 +172,7 @@ urlpatterns = [
 ```
 
 * `urls.py`는 우리의 웹 어플리케이션 경로들을 모두 관리한다.
-* 요청이 들어오면 `url.py`의 `urlpatterns`에 정의된 경로로 매피한다.
+* 요청이 들어오면 `url.py`의 `urlpatterns`에 정의된 경로로 맵핑한다.
 * path(`경로`, `view에 정의된 함수`)
 
 ### 2. View 정의

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>signup</title>
+  <link rel="stylesheet" href="{% static 'stylesheets/signup.css' %}">
+</head>
+<body>
+  <!-- 
+    form
+      action : 요청 보내는 곳
+      method : 요청 보내는 방식
+        GET : DB에서 어떠한 값을 꺼내오거나, 단순 요청.
+          - url에 quertystring으로 요청이 보내짐
+          - ?username=tak&password=123
+        POST : DB의 어떠한 값을 추가하거나, 삭제하는 경우
+          - HTTP 요청의 body (url에 보이지 않음)
+          - django에서 POST 요청으로 form을 보내는 경우 보안상의 이유로 항상 csrf_token을 넣어줘야함.
+   -->
+  <form action="/signup_result/" method="POST">
+    {% csrf_token %}
+    <label for="username">ID : </label>
+    <input id="username" type="text" name="username">
+    <br>
+    <label for="userpassword">PASSWORD : </label>
+    <input type="password" name="password" id="userpassword">
+    <br>
+    <input type="password" name="password_confirmation">
+    <input type="submit" value="제출">
+  </form>
+</body>
+</html>

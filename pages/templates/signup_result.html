@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="{% static 'stylesheets/signup.css' %}">
 </head>
 <body>
-  <h1>와~~~~</h1>
+  {% if is_signup %}
+    <h1>{{username}}님 회원가입 완료되엇습니다</h1>
+  {% else %}
+    <h1>비밀번호를 일치해주세요</h1>
+  {% endif %}
 </body>
 </html>
