@@ -20,7 +20,7 @@
           - HTTP 요청의 body (url에 보이지 않음)
           - django에서 POST 요청으로 form을 보내는 경우 보안상의 이유로 항상 csrf_token을 넣어줘야함.
    -->
-  <form action="/signup_result/" method="POST">
+  <form action="/pages/signup_result/" method="POST">
     {% csrf_token %}
     <label for="username">ID : </label>
     <input id="username" type="text" name="username">
