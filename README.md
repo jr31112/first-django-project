@@ -9,7 +9,7 @@ Framework란?
 
 **Django**
 
-![django01](C:\Users\student\Desktop\수업\django\first-django-project\django01.JPG)
+![django01](./django01.JPG)
 
 * Django 수행 방식
 
