@@ -205,3 +205,53 @@ $ python manage.py runserver
 ```
 
 `localhost:8000`에서 확인하자
+
+[Document | The Django template language](https://docs.djangoproject.com/en/2.2/ref/templates/language/)
+
+[Built-in template tags and filters](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/)
+
+- urls.py
+
+```
+from django.contrib import admin
+from django.urls import path
+
+
+# 1. url 설정
+# pages app 의 views.py 파일 불러오기
+from pages import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    # 1. url 설정
+    # url, 해당하는 views의 함수
+    path('', views.index),
+    # variable routing
+    # url의 특정 값을 변수처럼 활용
+    path('cube/<int:number>/', views.cube),
+]
+```
+
+- views.py : 모든 연산이나 로직처리는 view에서 할 것,
+
+```
+# 인자에 들어가는 변수는 urls.py에서 정의한 이름(number)과 같아야함!
+def cube(request, number):
+    result = number**3
+    context = {
+        'result': result,
+        'number': number,
+        'numbers': [1, 2, 3],
+        'students': {'지수': '지수!'}
+    }
+    return render(request, 'cube.html', context)
+```
+
+- cube.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+```

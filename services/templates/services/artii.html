@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="/services/artii_result/" method="GET">
+  <input type="radio" id="font" name="font" value="rounded">rounded
+  <input type="radio" id="font" name="font" value="acrobatic">acrobatic
+  <input type="radio" id="font" name="font" value="alligator">alligator
+  <input type="radio" id="font" name="font" value="short">short
+
+  <hr>
+  <label for="string">문자 </label>
+  <input type="text" id="string" name="string">
+
+  <br>
+  <input type="submit" value="출력!">
+</form>
+{% endblock %}
+
+
